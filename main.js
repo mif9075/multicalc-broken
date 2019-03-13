@@ -100,6 +100,7 @@ function clearList(event) {
     }
 
     // Update our html.
+    updateUL();
 }
 
 /*
