@@ -55,14 +55,16 @@ function appendToList(event) {
 
     // Get the value we're going to append from the input field.
     const stringifiedNumber = document.querySelector('#list-number').value;
-    const number = parseFloat(stringifiedNumber);
+    let number = parseFloat(stringifiedNumber);
 
     // Append the number to our array.
     // Hint: here (and elsewhere), watch the TYPE of the value above.
     // Research `typeof` operator if you're not sure.
-    numbers = numbers + number;
+    
+        numbers.push(number);
 
     // Update our html.
+    console.log(numbers);
     updateUL();
 
 }
