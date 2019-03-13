@@ -200,7 +200,7 @@ function clearUL() {
 // Append to the UL.
 function addToUL(numberToAppend) {
     const ul = document.querySelector('#number-list');
-    const newLI = document.createElement('<li>');
+    const newLI = document.createElement('li');
     newLI.innerText = numberToAppend;
     ul.appendChild(newLI);
 }
