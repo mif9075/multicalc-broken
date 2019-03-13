@@ -5,7 +5,7 @@
 */
 
 // global array
-const numbers = [];
+let numbers = [];
 
 // When the window loads, set up event listeners
 window.onload = init;
@@ -38,7 +38,7 @@ function init() {
         .addEventListener('click', multiplyByAll);
         
     // When the user clicks the divide button, divide the value from each item.
-    document.queryselector('#divide')
+    document.querySelector('#divide')
         .addEventListener('click', divideFromAll);
 }
 
