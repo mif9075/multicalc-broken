@@ -74,7 +74,7 @@ function removeFromList(event) {
     event.preventDefault();
 
     // Get the index we'll remove from the input field.
-    const index = document.querySelector('#listNumber').value;
+    const index = document.querySelector('#listnumber').value;
 
     // Remove the number at that index from the list.
     /*
@@ -206,4 +206,8 @@ function addToUL(numberToAppend) {
     const newLI = document.createElement('li');
     newLI.innerText = numberToAppend;
     ul.appendChild(newLI);
+}
+
+function resetInput {
+
 }
