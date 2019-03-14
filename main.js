@@ -52,7 +52,7 @@ function init() {
 function appendToList(event) {
     // Make sure page doesn't reload on button press.
     event.preventDefault();
-
+    
     // Get the value we're going to append from the input field.
     const stringifiedNumber = document.querySelector('#list-number').value;
     let number = parseFloat(stringifiedNumber);
@@ -60,13 +60,12 @@ function appendToList(event) {
     // Append the number to our array.
     // Hint: here (and elsewhere), watch the TYPE of the value above.
     // Research `typeof` operator if you're not sure.
-    
-        numbers.push(number);
+    numbers.push(number);
 
     // Update our html.
-    console.log(numbers);
     updateUL();
-
+    console.log(numbers);
+    
 }
 // Remove from the list.
 function removeFromList(event) {
@@ -74,7 +73,7 @@ function removeFromList(event) {
     event.preventDefault();
 
     // Get the index we'll remove from the input field.
-    const index = document.querySelector('#listnumber').value;
+    let index = document.querySelector('#listnumber').value;
 
     // Remove the number at that index from the list.
     /*
@@ -115,12 +114,13 @@ function clearList(event) {
 function addToAll(event) {
     // Make sure page doesn't reload on button press.
     event.preventDefault();
+    
     // Grab value to add.
     const stringifiedNumber = document.querySelector('#number-for-math').value;
     const numberToAdd = parseFloat(stringifiedNumber);
 
     // Add value to everything on the list.
-    for(const i = 0; i < numbers.length; i++) {
+    for(let i = 0; i < numbers.length; i++) {
         numbers[i] = numbers[i] + numberToAdd;
     }
 
@@ -188,9 +188,12 @@ function divideFromAll(event) {
 */
 
 function updateUL() {
+    clearUL();
     for (let i = 0; i < numbers.length; i++) {
         addToUL(numbers[i]);
     }
+    
+    
 }
 
 function clearUL() {
@@ -208,6 +211,6 @@ function addToUL(numberToAppend) {
     ul.appendChild(newLI);
 }
 
-function resetInput {
-
-}
+// function resetInput() {
+//     document.querySelector('#listnumber').value = '';
+// }
