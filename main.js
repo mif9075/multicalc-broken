@@ -155,7 +155,7 @@ function multiplyByAll(event) {
     const numberToMultiply = parseFloat(stringifiedNumber);
     
     // Multiply value by everything on the list.
-    for(let i = 0; i <= numbers.length; i++) {
+    for(let i = 0; i < numbers.length; i++) {
         numbers[i] = numbers[i] * numberToMultiply;
     }
     
