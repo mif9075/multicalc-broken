@@ -137,7 +137,7 @@ function subtractFromAll(event) {
     const numberToSubtract = parseFloat(stringifiedNumber);
     
     // Subtract value from everything on the list.
-    for(let i = 1; i < numbers.length; i++) {
+    for(let i = 0; i < numbers.length; i++) {
         numbers[i] = numbers[i] - numberToSubtract;
     }
 
