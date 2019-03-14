@@ -168,7 +168,7 @@ function divideFromAll(event) {
     event.preventDefault();
 
     // Grab value to divide from.
-    const stringifiedNumber = document.querySelector('#numberForMath').value;
+    const stringifiedNumber = document.querySelector('#number-for-math').value;
     const numberToDivide = parseFloat(stringifiedNumber);
 
     // Divide value from everything on the list.
